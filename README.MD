@@ -2,7 +2,7 @@
 
 # <img src="/public/assets/imgs/thelyre_apollo.png" width="64" height="64"> Base Apolo
 
-BaseApolo is an academic opportunity manager at the Federal University of Rio de Janeiro ([UFRJ](https://www.ufrj.br/)). This web app helps students and professors of UFRJ to disclose and search for academic opportunities such as undergraduate research, social and extension projects, college teams and more. The app was developed using the [MEAN](http://www.mean.io) stack wich is an easy starting point with [MongoDB](https://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](https://angularjs.org/) based applications.
+BaseApolo is an academic opportunity manager at the Federal University of Rio de Janeiro ([UFRJ](https://www.ufrj.br/)). This web app helps students and professors of UFRJ to disclose and search for academic opportunities such as undergraduate research, social and extension projects, college teams and more. The app was developed using the MEAN stack wich is an easy starting point with [MongoDB](https://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](https://angularjs.org/) based applications.
 
 ## Dependencies
 ### Linux
@@ -26,6 +26,14 @@ $ git clone https://github.com/Hguimaraes/baseapolo
 $ cd baseapolo && npm install
 ```
 
+### Edit your env variables
+You need to create an .env file in root directory and set the following variables:
+
+```bash
+DB_HOST=
+PORT= (Optional)
+```
+
 ### Invoke node with a task manager
 To run the web server you just need: 
 
@@ -44,5 +52,3 @@ http://localhost:3000
 * <a href="http://passportjs.org/">Passport</a> - An authentication middleware for Node.js which supports authentication using a username and password, Facebook, Twitter, and more.
 * <a href="http://getbootstrap.com/">Twitter Bootstrap</a> - The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects.
 * <a href="http://angular-ui.github.io/bootstrap/">UI Bootstrap</a> - Bootstrap components written in pure AngularJS
-
-### Core Packages

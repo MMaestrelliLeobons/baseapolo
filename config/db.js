@@ -3,5 +3,5 @@
  */
  
 module.exports = {
-    url : ''
+    url : process.env.DB_HOST
 };
