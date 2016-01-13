@@ -30,7 +30,7 @@ $ cd baseapolo && npm install
 To run the web server you just need: 
 
 ```bash
-$ node server
+$ gulp
 ```
 Then, open a browser and go to:
 ```bash
