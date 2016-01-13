@@ -1,0 +1,9 @@
+{
+    "name": "baseapolo",
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "angular": "latest",
+        "angular-route": "latest"
+    }
+}
