@@ -28,6 +28,7 @@ mongoose.connect(db.url, function (err, database){
 });
 
 // Routes ===========================================================
+require('./app/routes')(app)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Listen ===========================================================
