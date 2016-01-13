@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Hguimaraes/baseapolo.svg?branch=master)](https://travis-ci.org/Hguimaraes/baseapolo)
 
-# [![Base Apolo Logo](http://mean.io/system/assets/img/logos/meanlogo.png)](https://github.com/Hguimaraes/baseapolo) Base Apolo
+# <img src="/public/assets/imgs/thelyre_apollo.png" width="64" height="64"> Base Apolo
 
 BaseApolo is an academic opportunity manager at the Federal University of Rio de Janeiro ([UFRJ](https://www.ufrj.br/)). This web app helps students and professors of UFRJ to disclose and search for academic opportunities such as undergraduate research, social and extension projects, college teams and more. The app was developed using the [MEAN](http://www.mean.io) stack wich is an easy starting point with [MongoDB](https://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](https://angularjs.org/) based applications.
 
