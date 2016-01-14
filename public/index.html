@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 
 	<!-- Custom CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Custom JS -->
 
 	<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -24,33 +27,25 @@
 
 <body ng-controller="">
 	<!-- Navigation -->
-	<header>
-	<!-- Centered Tabs -->
-		<ul class="nav nav-tabs nav-justified">
-			<li><a href="#signin"><i class="fa fa-user-plus"></i> Sign Up </a></li>
-			<li class="active"><a href="#"><i class="fa fa-sign-in"></i> Sign In </a></li>
-			<li><a href="#about"><i class="fa fa-info-circle"></i> Sobre </a></li>
-		</ul>
-	</header>
+	
 
 	<!-- Main div -->
-	<div id = "main-content">
 	<!-- Injection of Angular content -->
+	<div class="" ui-view></div>
 	
-	</div>
-
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
-			<span class="copyright">Copyright &copy; Base Apolo 2016</span>
+			<p class="text-muted">Copyright &copy; Base Apolo 2016 </p>
 			<ul class="list-inline social-buttons">
 				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-github"></i></a></li>
+				<li><a href="https://github.com/Hguimaraes/baseapolo"><i class="fa fa-github"></i></a></li>
 			</ul>
 		</div>
 	</footer>
 	
 	<!-- Javascript stuff -->
 	<script src = "libs/angular/angular.min.js"></script>
+	<script src = "libs/angular-route/angular-route.min.js"></script>
 </body>
 </html>
