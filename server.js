@@ -17,6 +17,7 @@ var app = express();
 
 // Configuration ====================================================
 app.set('port', process.env.PORT || 3000);
+app.use(express.static(path.join(__dirname, 'public')));
 
 var db = require('./config/db');
 mongoose.connect(db.url, function (err, database){
@@ -29,7 +30,6 @@ mongoose.connect(db.url, function (err, database){
 
 // Routes ===========================================================
 require('./app/routes')(app)
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Listen ===========================================================
 http.createServer(app).listen(app.get('port'), function() {
