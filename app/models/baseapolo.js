@@ -4,15 +4,20 @@
 
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('opportunity', {
+var opportunitySchema = mongoose.Schema({
 	title: String,
 	post_date: Date,
 	end_date: Date,
-	//admin: {user.id : user.name},
-	likes: int,
+	admin: mongoose.Schema.ObjectId,
+	likes: Number,
 	description: String
 });
 
-module.exports = mongoose.model('user', {
-	name: String
+var userSchema = mongoose.Schema({
+	name: String,
+	birthday: Date,
+	interest: [mongoose.Schema.ObjectId]
 });
+
+module.exports = mongoose.model('opportunity', opportunitySchema);
+module.exports = mongoose.model('user', userSchema);
