@@ -6,6 +6,7 @@
         "mongoose"   : "latest",
         "body-parser" : "latest",
         "method-override" : "latest",
-        "dotenv" : "latest"
+        "dotenv" : "latest",
+        "angular-ui-bootstrap" : "latest"
     }
 }
