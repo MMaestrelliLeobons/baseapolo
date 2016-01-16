@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.about').config(['',
+angular.module('mean_signup').config(['',
   function() {
     .state('', {
       url: '',

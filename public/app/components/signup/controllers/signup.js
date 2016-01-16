@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.signup')
+angular.module('mean_signup')
 	.controller('', ['', 'Global',
 	  function(, Global) {
 // Original scaffolded code.

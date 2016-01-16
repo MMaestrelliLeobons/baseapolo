@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.signup').factory('', [
+angular.module('mean_signup').factory('', [
   function() {
     return {
       name: 'signup'
