@@ -26,7 +26,7 @@ EOF
 cat > "$1/controllers/$1.js" <<EOF
 'use strict';
 
-angular.module('mean_$1')
+angular.module('baseapolo.$1')
 	.controller('', ['$scope', 'Global',
 	  function($scope, Global) {
 // Original scaffolded code.
@@ -41,7 +41,7 @@ EOF
 cat > "$1/routes/$1.js" <<EOF
 'use strict';
 
-angular.module('mean_$1').config(['',
+angular.module('baseapolo.$1').config(['',
   function() {
     $meanStateProvider.state('', {
       url: '',
@@ -54,7 +54,7 @@ EOF
 cat > "$1/services/$1.js" <<EOF
 'use strict';
 
-angular.module('mean_$1').factory('', [
+angular.module('baseapolo.$1').factory('', [
   function() {
     return {
       name: '$1'

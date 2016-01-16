@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('baseapolo.about')
+angular.module('baseapolo.navbar.public')
 	.controller('', ['', 'Global',
 	  function(, Global) {
 // Original scaffolded code.
       .global = Global;
       .package = {
-        name: 'about'
+        name: 'navbar.public'
       };
     }
   ]);

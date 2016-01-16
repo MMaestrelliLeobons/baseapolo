@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean_signin').config(['',
+angular.module('baseapolo.home.public').config(['',
   function() {
     .state('', {
       url: '',

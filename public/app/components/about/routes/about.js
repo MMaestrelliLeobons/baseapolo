@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean_about').config(['',
+angular.module('baseapolo.about').config(['',
   function() {
     .state('', {
       url: '',

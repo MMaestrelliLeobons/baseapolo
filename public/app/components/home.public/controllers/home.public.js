@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('mean_signin')
+angular.module('baseapolo.home.public')
 	.controller('', ['', 'Global',
 	  function(, Global) {
 // Original scaffolded code.
       .global = Global;
       .package = {
-        name: 'signin'
+        name: 'home.public'
       };
     }
   ]);

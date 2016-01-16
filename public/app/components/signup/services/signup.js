@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean_signup').factory('', [
+angular.module('baseapolo.signup').factory('', [
   function() {
     return {
       name: 'signup'

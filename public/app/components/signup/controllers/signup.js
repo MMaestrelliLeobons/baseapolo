@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean_signup')
+angular.module('baseapolo.signup')
 	.controller('', ['', 'Global',
 	  function(, Global) {
 // Original scaffolded code.
