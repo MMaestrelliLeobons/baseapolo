@@ -6,6 +6,16 @@ angular.module('baseapolo.home.public', ['ui.router'])
 			$stateProvider	
 			    .state('homepublic', {
 			    	url: '/',
-			    	templateUrl: './app/components/home.public/views/home.public.html'
+			    	views:{
+			    		'': {
+			    			templateUrl: './app/components/home.public/views/home.public.html'
+			    		},
+			    		'navbar@homepublic':{
+			    			templateUrl: './app/shared/navbar.public/views/navbar.public.html'
+			    		},
+			    		'footer@homepublic':{
+			    			templateUrl: './app/shared/footer.public/views/footer.public.html'
+			    		}
+			    	}
 			    });
 	  }]);

@@ -6,7 +6,17 @@ angular.module('baseapolo.about', ['ui.router'])
   			$stateProvider
 	    		.state('about', {
 	      			url: '/about',
-	      			templateUrl: './app/components/about/views/about.html'
+	      			views:{
+	      				'':{
+	      					templateUrl: './app/components/about/views/about.html'
+	      				},
+	      				'navbar@about':{
+	      					templateUrl: './app/shared/navbar.public/views/navbar.public.html'
+	      				},
+	      				'footer@about':{
+	      					templateUrl: './app/shared/footer.public/views/footer.public.html'
+	      				}
+	      			}
 	    		});
   		}
 	]);
