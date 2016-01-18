@@ -1,9 +1,8 @@
 'use strict';
 
-angular.module('baseapolo.signup')
-	.controller('', ['', 'Global',
+angular.module('baseapolo')
+	.controller('signupCtrl', ['', 'Global',
 	  function(, Global) {
-// Original scaffolded code.
       .global = Global;
       .package = {
         name: 'signup'

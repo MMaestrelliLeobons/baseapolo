@@ -27,9 +27,8 @@ cat > "$1/controllers/$1.js" <<EOF
 'use strict';
 
 angular.module('baseapolo.$1')
-	.controller('', ['$scope', 'Global',
+	.controller('$1Ctrl', ['$scope', 'Global',
 	  function($scope, Global) {
-// Original scaffolded code.
       $scope.global = Global;
       $scope.package = {
         name: '$1'
@@ -41,14 +40,15 @@ EOF
 cat > "$1/routes/$1.js" <<EOF
 'use strict';
 
-angular.module('baseapolo.$1').config(['',
-  function() {
-    $meanStateProvider.state('', {
-      url: '',
-      templateUrl: ''
-    });
-  }
-]);
+angular.module('baseapolo.$1', ['ui.router'])
+  .config(['$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('/$1', {
+          url: '',
+          templateUrl: ''
+        });
+    }]);
 EOF
 
 cat > "$1/services/$1.js" <<EOF
