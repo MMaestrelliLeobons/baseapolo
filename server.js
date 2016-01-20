@@ -56,4 +56,4 @@ app.get('*', function(req, res) {
 
 // Listen ===========================================================
 app.listen(config.port);
-console.log("- Express server listening on port " + app.get('port'));
+console.log("- Express server listening on port " + config.port);
