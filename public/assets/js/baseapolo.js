@@ -1,8 +1,6 @@
 angular.module('baseapolo', [
 	'ui.router',
-	'baseapolo.about',
-	'baseapolo.home.public',
-	'baseapolo.signup'])
+	'baseapolo.home'])
 	.config(['$stateProvider','$urlRouterProvider',
 		function($stateProvider,$urlRouterProvider){
 			'use strict';
