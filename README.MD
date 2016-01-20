@@ -24,6 +24,7 @@ $ sudo apt-get install nodejs
 ```bash
 $ git clone https://github.com/Hguimaraes/baseapolo
 $ cd baseapolo && npm install
+$ bower install
 ```
 
 ### Edit your env variables
@@ -38,7 +39,7 @@ PORT= (Optional)
 To run the web server you just need: 
 
 ```bash
-$ gulp
+$ node server.js
 ```
 Then, open a browser and go to:
 ```bash
