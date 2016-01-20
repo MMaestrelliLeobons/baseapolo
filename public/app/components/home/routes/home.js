@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('baseapolo.home', ['ui.router'])
-	.config(['$stateProvider','$urlRouterProvider',
-		function($stateProvider, $urlRouterProvider) {
-			$stateProvider	
+	.config(['$stateProvider','$urlRouterProvider', '$locationProvider',
+		function($stateProvider, $urlRouterProvider, $locationProvider) {
+			$stateProvider
                 .state('home', {
                     url: '/',
                     abstract: true,
@@ -13,6 +13,7 @@ angular.module('baseapolo.home', ['ui.router'])
                         }
                     }
                 })
+
 			    .state('home.signin', {
 			    	url: '',
 			    	views:{
@@ -39,4 +40,9 @@ angular.module('baseapolo.home', ['ui.router'])
 			    		}
 			    	}
 			    });
+                
+                $locationProvider.html5Mode({
+                    enabled: true,
+                    requireBase: false
+                });
 	  }]);
