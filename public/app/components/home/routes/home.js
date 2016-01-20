@@ -4,37 +4,37 @@ angular.module('baseapolo.home', ['ui.router'])
 	.config(['$stateProvider','$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider) {
 			$stateProvider	
-			    .state('signin', {
-			    	url: '/',
+                .state('home', {
+                    url: '/',
+                    abstract: true,
+                    views: {
+                        '@': {
+                            templateUrl: './app/components/home/views/home.html'
+                        }
+                    }
+                })
+			    .state('home.signin', {
+			    	url: '',
 			    	views:{
-			    		'': {
-			    			templateUrl: './app/components/home/views/home.html'
-			    		},
-			    		'content@signin':{
+			    		'content':{
 			    			templateUrl: './app/components/home/views/signin.html'
 			    		}
 			    	}
 			    })
 
-			    .state('signup', {
-			    	url: '/signup',
+			    .state('home.signup', {
+			    	url: 'signup',
 			    	views:{
-			    		'': {
-			    			templateUrl: './app/components/home/views/home.html'
-			    		},
-			    		'content@signup':{
+			    		'content':{
 			    			templateUrl: './app/components/home/views/signup.html'
 			    		}
 			    	}
 			    })
 
-			    .state('about', {
-			    	url: '/about',
+			    .state('home.about', {
+			    	url: 'about',
 			    	views:{
-			    		'': {
-			    			templateUrl: './app/components/home/views/home.html'
-			    		},
-			    		'content@about':{
+			    		'content':{
 			    			templateUrl: './app/components/home/views/about.html'
 			    		}
 			    	}
