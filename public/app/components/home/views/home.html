@@ -1,5 +1,35 @@
-<div class="">
-	<h3>Navbar will be here....</h3>
-	<div ui-view="content"></div>
-	<h3>Footer will be here....</h3>
+<link rel="stylesheet" href="app/components/home/assets/css/home.css">
+<script type="text/javascript" src="app/components/home/views/headerController.js"></script>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Base Apolo</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          {{active}}
+            <li ui-sref-active="active"><a href="/signup" ui-sref="home.signup">Sign Up</a></li>
+            <li ui-sref-active="active"><a href="/about" ui-sref="home.about">Sobre</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+   
+    <!-- Begin page content -->
+    <div ui-view="content"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Base Apolo, 2016.</p>
+      </div>
+    </footer>
 </div>

@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('baseapolo.home', ['ui.router'])
-	.config(['$stateProvider','$urlRouterProvider', '$locationProvider',
+angular.module('baseapolo')
+	.config(
 		function($stateProvider, $urlRouterProvider, $locationProvider) {
 			$stateProvider
                 .state('home', {
                     url: '/',
                     abstract: true,
+                    controller: 'homeCtrl',
                     views: {
                         '@': {
                             templateUrl: './app/components/home/views/home.html'
@@ -45,4 +46,4 @@ angular.module('baseapolo.home', ['ui.router'])
                     enabled: true,
                     requireBase: false
                 });
-	  }]);
+	  });
