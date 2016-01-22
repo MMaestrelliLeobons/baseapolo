@@ -1,11 +1,3 @@
-/**
- * Mea cup theme
-    #191919
-    #DFE2DB
-    #FFF056
-    #FFFFFF
- */
-
 html {
   position: relative;
   min-height: 100%;
@@ -13,25 +5,4 @@ html {
 
 body {
   margin-bottom: 60px;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  
-  /* Set the fixed height of the footer here */
-  height: 50px;
-  background-color: #191919;
-}
-
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-.container .text-muted {
-  text-align: center;
-  color: #FFF056;
-  margin: 20px 0;
 }
