@@ -1,39 +1,38 @@
 <link rel="stylesheet" href="app/components/home/assets/css/home.css">
-<script type="text/javascript" src="app/components/home/views/headerController.js"></script>
 
-<div>
-	<!-- Fixed navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">
-					<img alt="Base Apolo" src="">
-				</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li ui-sref-active="active"><a href="/" ui-sref="home.signin">Login</a></li>
-					<li ui-sref-active="active"><a href="/signup" ui-sref="home.signup">Sign Up</a></li>
-            		<li ui-sref-active="active"><a href="/about" ui-sref="home.about">Sobre</a></li>
-            		<li ui-sref-active="active"><a href="/about" ui-sref="home.about">Contato</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				<img alt="Base Apolo" src="">
+			</a>
 		</div>
-	</nav>
-	
-	<!-- Main content -->
+		<div id="navbar" class="navbar-collapse collapse" uib-collapse="navCollapsed">
+			<ul class="nav navbar-nav navbar-right">
+				<li ui-sref-active="active"><a href="/" ui-sref="home.signin">Login</a></li>
+				<li ui-sref-active="active"><a href="/signup" ui-sref="home.signup">Sign Up</a></li>
+				<li ui-sref-active="active"><a href="/about" ui-sref="home.about">Sobre</a></li>
+				<li ui-sref-active="active"><a href="/contact" ui-sref="home.contact">Contato</a></li>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</nav>
+
+<!-- Main content -->
+<div class="container home-container">
 	<div ui-view="content"></div>
-
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<p class="text-muted">Base Apolo, 2016.</p>
-		</div>
-	</footer>
 </div>
+
+<!-- Footer -->
+<footer class="footer">
+	<div class="container">
+		<p class="text-muted"><i class="fa fa-copyright"></i>Base Apolo, 2016.</p>
+	</div>
+</footer>

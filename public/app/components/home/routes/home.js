@@ -40,6 +40,15 @@ angular.module('baseapolo')
 			    			templateUrl: './app/components/home/views/about.html'
 			    		}
 			    	}
+			    })
+
+			    .state('home.contact', {
+			    	url: 'contact',
+			    	views:{
+			    		'content':{
+			    			templateUrl: './app/components/home/views/contact.html'
+			    		}
+			    	}
 			    });
                 
                 $locationProvider.html5Mode({
