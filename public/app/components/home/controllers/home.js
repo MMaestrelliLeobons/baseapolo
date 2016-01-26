@@ -2,6 +2,7 @@
 
 angular.module('baseapolo').controller('courseCtrl',
 		function($scope, $location) {
+
 			$scope.courses = [
 			'Engenharia Ambiental',
 			'Engenharia Civil',
@@ -16,5 +17,11 @@ angular.module('baseapolo').controller('courseCtrl',
 			'Engenharia Mecânica',
 			'Engenharia Metalúrgica',
 			'Engenharia Naval e Oceânica',
-			'Engenharia Nuclear']
+			'Engenharia Nuclear'];
+
+			$scope.course = $scope.courses[0];
+
+			$scope.update = function(item) {
+				$scope.course = item;
+			}
     	});
