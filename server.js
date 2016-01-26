@@ -6,19 +6,24 @@
 require('dotenv').load();
 
 // modules ==========================================================
-var express = require('express');
-var bodyParser = require('body-parser');
-var morgan     = require('morgan'); 		// used to see requests
-var	methodOverride = require('method-override');
-var path = require('path');
-var mongoose = require('mongoose');
-var config = require('./config/config');
+var express 		= require('express');
+var bodyParser 		= require('body-parser');
+var morgan     		= require('morgan'); 		// used to see requests
+var	methodOverride 	= require('method-override');
+var path 			= require('path');
+var mongoose 		= require('mongoose');
+var passport 		= require('passport');
+var flash    		= require('connect-flash');
+var cookieParser 	= require('cookie-parser');
+var session 		= require('express-session');
 
-var app = express();
+var config 			= require('./config/config');
+var app 			= express();
 
 // Configuration ====================================================
 
 // use body parser so we can grab information from POST requests
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -33,6 +38,17 @@ app.use(function(req, res, next) {
 // log all requests to the console 
 app.use(morgan('dev'));
 
+// Setting Passport
+app.use(session({
+	secret: config.secret,
+	resave: true,
+    saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash()); // use connect-flash for flash messages stored in session
+
 // Connecting to the DB
 mongoose.connect(config.db_url, function (err, database){
 	if(!err) {
@@ -46,7 +62,7 @@ mongoose.connect(config.db_url, function (err, database){
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes ===========================================================
-var apiRoutes = require('./app/routes/api')(app, express);
+var apiRoutes = require('./app/routes/api')(app, express, passport);
 app.use('/api', apiRoutes);
 
 // Send users to front-end
