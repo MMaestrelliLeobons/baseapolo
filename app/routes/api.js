@@ -11,7 +11,7 @@ var config = require('../../config/config');
 var secret = config.secret
 
 // Exposing routes to server.js through a REST API
-module.exports = function(app, express) {
+module.exports = function(app, express, passport) {
 	var apiRouter = express.Router();
 
 	// Route middleware to verify a token

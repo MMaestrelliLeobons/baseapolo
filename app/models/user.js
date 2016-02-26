@@ -9,7 +9,8 @@ var bcrypt = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
 	name: String,
 	email: { type: String, required: true, index: { unique: true }},
-	password: { type: String, required: true, select: false }
+	password: { type: String, required: true, select: false },
+	course: String
 });
 
 // Hash the password before the user is saved

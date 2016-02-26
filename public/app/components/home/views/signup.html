@@ -1,3 +1,5 @@
+<h1 class="title-text"> Cadastro </h1>
+
 <div class="signup-div">
 	<form class="form-signup">
 		<!-- Simple user input -->
@@ -10,19 +12,21 @@
 		
 		<!-- Dropdown with course options -->
 		<div class="btn-group" uib-dropdown keyboard-nav ng-controller="courseCtrl">
-			<button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle> {{courses[0]}} 
+			<button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle> {{course}} 
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" uib-dropdown-menu role="menu">
-				<li ng-repeat="x in courses"><a href="#">{{x}}</a></li>
+				<li ng-repeat="x in courses"><a ng-click="update(x)">{{x}}</a></li>
 			</ul>
 		</div>
 		
 		<!-- Use terms checkbox -->
 		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="accept" required> Li e concordo com os termos de uso.
-			</label>
+			<span class="checkbox-highlight">
+				<label>
+					<input type="checkbox" value="accept" required> Li e concordo com os termos de uso.
+				</label>
+			</span>
 		</div>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
 	</form>
